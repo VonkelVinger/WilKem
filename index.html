@@ -1,25 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Willem Kempen</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>News Event Simulator</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <!-- Tailwind (optional quick styling) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- YAML parser -->
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
 </head>
-<body>
-    <header>
-        <h1>Willem Kempen</h1>
-        <nav>
-            <a href="/">Home</a> | 
-            <a href="/about.html">About</a> | 
-            <a href="/contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <p>Welcome to my simple, fast website. More content coming soon!</p>
-    </main>
-    <footer>
-        © 2024 Willem Kempen. Hosted on GitHub + Netlify.
-    </footer>
+<body class="bg-slate-50 text-slate-900">
+  <header class="p-4 border-b bg-white">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <h1 class="text-xl font-bold">News Event Simulator</h1>
+      <div class="text-sm">Scenario: <span id="scenarioTitle">—</span> · Time left: <span id="timeLeft">—</span></div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-4 grid gap-4 md:grid-cols-3">
+    <!-- Feed -->
+    <section class="md:col-span-2">
+      <h2 class="section-h">Live Feed</h2>
+      <div id="feed" class="panel h-72 overflow-y-auto"></div>
+    </section>
+
+    <!-- Notes / Angle -->
+    <aside>
+      <h2 class="section-h">Notes & Angle</h2>
+      <label class="lbl">Working angle (one sentence)</label>
+      <input id="angle" class="inp" placeholder="e.g., Two treated after mall fire; cause under investigation" />
+      <label class="lbl mt-3">Notes (kept locally)</label>
+      <textarea id="notes" class="inp h-40" placeholder="Facts, source leads, questions…"></textarea>
+      <div class="mt-2 text-xs text-slate-500">Autosaves to your browser.</div>
+    </aside>
+
+    <!-- Image desk -->
+    <section class="md:col-span-1">
+      <h2 class="section-h">Image Desk</h2>
+      <div id="assets" class="grid grid-cols-2 gap-2"></div>
+      <label class="lbl mt-3">Caption</label>
+      <input id="caption" class="inp" placeholder="Smoke rises above parking area…" />
+      <label class="lbl mt-3">Credit</label>
+      <input id="credit" class="inp" placeholder="Photo: Jade Ndlovu (used with permission)" />
+    </section>
+
+    <!-- Editor -->
+    <section class="md:col-span-3">
+      <h2 class="section-h">Story Draft</h2>
+      <div class="grid md:grid-cols-2 gap-3">
+        <input id="headline" class="inp" placeholder="Headline (≤75 chars)" />
+        <input id="standfirst" class="inp" placeholder="Standfirst (≤200 chars)" />
+      </div>
+      <textarea id="story" class="inp h-64 mt-3" placeholder="Write 500–700 words…"></textarea>
+      <div class="flex items-center gap-3 mt-3">
+        <button id="btnSubmit" class="btn">Submit</button>
+        <button id="btnBrief" class="btn btn-ghost">File quick brief</button>
+        <span id="wordCount" class="text-sm text-slate-500">0 words</span>
+      </div>
+      <div id="scoreBox" class="mt-4 hidden"></div>
+    </section>
+  </main>
+
+  <!-- App scripts -->
+  <script src="/js/app.part1-core.js"></script>
+  <script src="/js/app.part2-ui.js"></script>
+  <script src="/js/app.part3-scoring.js"></script>
+  <script>
+    window.NES.boot({ scenario: '/scenarios/mall-fire-001.yml', timeScale: 1 });
+  </script>
 </body>
 </html>
