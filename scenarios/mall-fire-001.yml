@@ -13,11 +13,11 @@ traps:
   rumour_word: "terror attack"
 assets:
   - id: p01
-    url: /assets/images/p01_skylight.jpg
+    url: assets/images/p01_skylight.jpg
     desc: "Flames through skylight (old viral photo)"
     trap: true
   - id: p02
-    url: /assets/images/p02_smoke.jpg
+    url: assets/images/p02_smoke.jpg
     desc: "Smoke from car park (today)"
     trap: false
 feed_timeline:
