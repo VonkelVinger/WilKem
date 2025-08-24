@@ -1,0 +1,33 @@
+id: mall-fire-001
+title: "Early-morning fire at Riverbend Mall"
+time_limit_minutes: 60
+facts:
+  fatalities_count: "no fatalities confirmed"
+  cause_unknown: "cause under investigation"
+  official_statement_time: "police briefing at 11:00"
+required_confirms:
+  - fatalities_count
+  - cause_unknown
+  - official_statement_time
+traps:
+  rumour_word: "terror attack"
+assets:
+  - id: p01
+    url: /assets/images/p01_skylight.jpg
+    desc: "Flames through skylight (old viral photo)"
+    trap: true
+  - id: p02
+    url: /assets/images/p02_smoke.jpg
+    desc: "Smoke from car park (today)"
+    trap: false
+feed_timeline:
+  - at_sec: 0
+    text: "Anonymous tip: 'Huge explosion at Riverbend Mall; many dead!'"
+  - at_sec: 300
+    text: "WhatsApp voice note claims a 'terror attack' (unverified)."
+  - at_sec: 900
+    text: "EMS: 'Crews on scene. Two treated for smoke inhalation.'"
+  - at_sec: 1500
+    text: "Mall PR: 'Small fire quickly contained' (spin)."
+  - at_sec: 2100
+    text: "Police media alert: briefing at 11:00; cause under probe."
