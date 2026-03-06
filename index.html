@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-ZA">
 <head>
-
-<meta charset="utf-8" />
+  <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <meta name="description"
@@ -21,330 +20,731 @@ content="Practical AI training for South African workplaces. Save hours of work 
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 
-<script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["ui-sans-serif","system-ui","Segoe UI","Roboto","Helvetica Neue","Arial","Noto Sans","Apple Color Emoji","Segoe UI Emoji"]
+          },
+          boxShadow: {
+            soft: "0 10px 30px rgba(0,0,0,0.25)"
+          }
+        }
+      }
+    }
+  </script>
 
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
 
-<body class="bg-slate-950 text-slate-200 antialiased">
+<body class="bg-slate-950 text-slate-100 font-sans">
+  <!-- Background glow -->
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0">
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 h-[520px] w-[520px] rounded-full bg-sky-500/15 blur-3xl"></div>
+    <div class="absolute top-[40vh] -right-40 h-[520px] w-[520px] rounded-full bg-indigo-500/10 blur-3xl"></div>
+  </div>
 
-<div class="mx-auto max-w-6xl px-4 md:px-6">
+  <div class="relative min-h-screen">
+    <!-- Header -->
+    <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6">
+        <a href="#top" class="flex items-center gap-3">
+          <div class="grid h-9 w-9 place-items-center rounded-xl bg-white/10 text-sm font-semibold tracking-wide">WK</div>
+          <div class="leading-tight">
+            <div class="text-sm font-semibold">Willem Kempen</div>
+            <div class="text-xs text-slate-300">Practical AI for everyday work</div>
+          </div>
+        </a>
 
-<header class="flex items-center justify-between py-6">
+        <nav class="hidden items-center gap-6 text-sm text-slate-200 md:flex">
+          <a href="#offers" class="hover:text-white">Training</a>
+          <a href="#course" class="hover:text-white">1-Day Course</a>
+          <a href="#why" class="hover:text-white">Why this</a>
+          <a href="#about" class="hover:text-white">About</a>
+          <a href="https://calendly.com/kempen-willem"
+             target="_blank" rel="noopener noreferrer"
+             class="rounded-xl bg-sky-500/90 px-4 py-2 font-semibold text-slate-950 hover:bg-sky-400">
+            Book a call
+          </a>
+        </nav>
 
-<div class="text-lg font-semibold tracking-tight">
-Willem Kempen
-</div>
+        <!-- Mobile menu button -->
+        <button id="menuBtn" class="md:hidden rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10">
+          Menu
+        </button>
+      </div>
 
-<nav class="hidden md:flex gap-6 text-sm">
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="hidden border-t border-white/10 bg-slate-950/95 backdrop-blur md:hidden">
+        <div class="mx-auto max-w-6xl px-4 py-3">
+          <div class="flex flex-col gap-2 text-sm">
+            <a href="#offers" class="rounded-lg px-3 py-2 hover:bg-white/10">Training</a>
+<a href="#course" class="rounded-lg px-3 py-2 hover:bg-white/10">1-Day Course</a>
+            <a href="#why" class="rounded-lg px-3 py-2 hover:bg-white/10">Why this</a>
+            <a href="#about" class="rounded-lg px-3 py-2 hover:bg-white/10">About</a>
+            <a href="https://calendly.com/kempen-willem"
+               target="_blank" rel="noopener noreferrer"
+               class="rounded-lg bg-sky-500/90 px-3 py-2 font-semibold text-slate-950 hover:bg-sky-400">
+              Book a call
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
 
-<a href="#course" class="hover:text-white">1-Day Course</a>
-<a href="#assessment" class="hover:text-white">Assessment</a>
-<a href="#contact" class="hover:text-white">Contact</a>
+    <!-- Main -->
+    <main id="top">
+      <!-- HERO -->
+      <section class="mx-auto max-w-6xl px-4 pt-14 pb-10 md:px-6 md:pt-20">
+        <div class="grid gap-10 md:grid-cols-2 md:items-center">
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200">
+              <span class="h-2 w-2 rounded-full bg-sky-400"></span>
+              For South Africans, by a South African
+            </div>
 
-</nav>
-
-</header>
-<section class="py-16">
-
-<p class="inline-block rounded-full bg-slate-800 px-4 py-1 text-xs text-slate-300">
-For South Africans, by a South African
-</p>
-
-<h1 class="mt-6 text-4xl font-extrabold leading-tight md:text-5xl">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
 Practical AI Training for Real Work
 </h1>
 
-<p class="mt-6 max-w-2xl text-lg text-slate-300">
-Learn how YOU can use AI to save hours of work every week.  
-Practical training designed for South African workplaces.
+            <p class="mt-4 text-lg text-slate-300 max-w-2xl">
+Learn how to use AI tools to save hours of work every week.
+Hands-on training designed for professionals, teams, and small businesses.
 </p>
 
-<div class="mt-10 flex flex-col gap-4 sm:flex-row">
+            <div class="mt-4 text-sm text-slate-300">
+              Training available in <span class="font-semibold text-slate-100">English</span> or
+              <span class="font-semibold text-slate-100">Afrikaans</span>.
+              <span class="mx-2 text-slate-500">•</span>
+              No coding required.
+            </div>
 
-<a
-href="https://calendly.com/kempen-willem"
-target="_blank"
-rel="noopener noreferrer"
-class="rounded-2xl bg-sky-500 px-6 py-3 font-semibold text-slate-950 hover:bg-sky-400">
+            <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+              <a href="https://calendly.com/kempen-willem"
+                 target="_blank" rel="noopener noreferrer"
+                 class="rounded-2xl bg-sky-500/90 px-6 py-3 text-center font-semibold text-slate-950 hover:bg-sky-400">
+                Book a 15-minute call
+              </a>
+              <a href="#offers"
+                 class="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 text-center font-semibold hover:bg-white/10">
+                See training options
+              </a>
+            </div>
 
-Book a 15-minute call
+            <div class="mt-7 grid gap-3 sm:grid-cols-3">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <div class="text-sm font-semibold">Faster writing</div>
+                <div class="mt-1 text-xs text-slate-300">Emails, reports, proposals</div>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <div class="text-sm font-semibold">Quicker research</div>
+                <div class="mt-1 text-xs text-slate-300">Summaries & key points</div>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <div class="text-sm font-semibold">Less admin</div>
+                <div class="mt-1 text-xs text-slate-300">Templates & workflows</div>
+              </div>
+            </div>
+          </div>
 
-</a>
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-soft">
+            <div class="text-sm font-semibold text-slate-100">What you’ll be able to do</div>
+            <ul class="mt-4 space-y-3 text-sm text-slate-200">
+              <li class="flex gap-3">
+                <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-sky-500/20 text-sky-200">✓</span>
+                Summarise long documents in minutes
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-sky-500/20 text-sky-200">✓</span>
+                Turn messy notes into structured, usable text
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-sky-500/20 text-sky-200">✓</span>
+                Create reusable templates for recurring work
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-sky-500/20 text-sky-200">✓</span>
+                Build simple workflows that save time every week
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-sky-500/20 text-sky-200">✓</span>
+                Use AI responsibly (quick checks + guardrails)
+              </li>
+            </ul>
 
-<a
-href="#course"
-class="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 font-semibold hover:bg-white/10">
+            <div class="mt-6 rounded-2xl border border-white/10 bg-slate-950/40 p-4">
+              <div class="text-xs font-semibold text-slate-200">Quick note</div>
+              <p class="mt-1 text-xs text-slate-300">
+                This is not about becoming an AI engineer. It’s about making AI useful in everyday work — safely, clearly, and practically.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Quick Wins -->
+      <section class="mx-auto max-w-6xl px-4 pb-10 md:px-6">
+        <h2 class="text-2xl font-extrabold tracking-tight">
+          Three ways people immediately save time with AI
+        </h2>
+        <p class="mt-2 text-slate-300">
+          Simple changes most people can start using within a day.
+        </p>
 
-See the 1-Day Course
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <div class="text-sm font-semibold text-sky-300">1. Summarising long documents</div>
+            <p class="mt-3 text-sm text-slate-300">
+              Extract key points, action items, and risks from a long report in under a minute.
+            </p>
+            <div class="mt-4 text-xs text-slate-400">
+              Typical time saved: <span class="text-slate-200 font-semibold">30–60 minutes</span>
+            </div>
+          </div>
 
-</a>
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <div class="text-sm font-semibold text-sky-300">2. Drafting emails and reports</div>
+            <p class="mt-3 text-sm text-slate-300">
+              Turn rough notes into a clear professional message in seconds.
+            </p>
+            <div class="mt-4 text-xs text-slate-400">
+              Typical time saved: <span class="text-slate-200 font-semibold">10–30 minutes per message</span>
+            </div>
+          </div>
 
-</div>
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <div class="text-sm font-semibold text-sky-300">3. Reusable templates</div>
+            <p class="mt-3 text-sm text-slate-300">
+              Create prompts and templates once, then reuse them every week for recurring tasks.
+            </p>
+            <div class="mt-4 text-xs text-slate-400">
+              Typical time saved: <span class="text-slate-200 font-semibold">hours every week</span>
+            </div>
+          </div>
+        </div>
 
+        <div class="mt-8 flex justify-center">
+          <a href="https://calendly.com/kempen-willem"
+             target="_blank" rel="noopener noreferrer"
+             class="rounded-2xl bg-sky-500/90 px-6 py-3 font-semibold text-slate-950 hover:bg-sky-400">
+            Book a quick introduction call
+          </a>
+        </div>
+      </section>
+
+      <!-- Who this is for -->
+      <section class="mx-auto max-w-6xl px-4 pb-10 md:px-6">
+        <h2 class="text-2xl font-extrabold tracking-tight">Who this training is for</h2>
+        <p class="mt-2 text-slate-300">
+          Anyone whose work involves information: documents, email, reporting, research, admin, and recurring tasks.
+        </p>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <div class="text-sm font-semibold text-sky-300">Individuals & teams</div>
+            <ul class="mt-3 space-y-1 text-sm text-slate-300">
+              <li>• Admin staff</li>
+              <li>• Managers</li>
+              <li>• Researchers</li>
+              <li>• Writers & analysts</li>
+              <li>• Consultants</li>
+            </ul>
+          </div>
+
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <div class="text-sm font-semibold text-sky-300">Small business owners</div>
+            <ul class="mt-3 space-y-1 text-sm text-slate-300">
+              <li>• Faster proposals & quotes</li>
+              <li>• Marketing drafts</li>
+              <li>• Less admin load</li>
+              <li>• Better client comms</li>
+            </ul>
+          </div>
+
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <div class="text-sm font-semibold text-sky-300">Corporate teams</div>
+            <ul class="mt-3 space-y-1 text-sm text-slate-300">
+              <li>• Productivity training</li>
+              <li>• Responsible AI habits</li>
+              <li>• Workflow optimisation</li>
+              <li>• Practical guardrails</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Calendly (embedded booking + fallback) -->
+      <section class="mx-auto max-w-4xl px-4 py-10 md:px-6">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-soft md:p-8">
+          <h2 class="text-2xl font-extrabold tracking-tight">Book a short introduction call</h2>
+          <p class="mt-2 text-slate-300">
+            Tell me what kind of work you do and where you’d like to save time. In 15 minutes we can identify quick wins.
+          </p>
+
+          <div class="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-white">
+            <div class="calendly-inline-widget"
+                 data-url="https://calendly.com/kempen-willem"
+                 style="min-width:320px;height:720px;">
+            </div>
+
+            <!-- Fallback (shown if Calendly doesn't load) -->
+            <div id="calendlyFallback" class="hidden p-6 text-center">
+              <p class="text-slate-700 font-semibold">Booking not loading?</p>
+              <p class="mt-1 text-slate-600 text-sm">Open scheduling in a new tab:</p>
+              <a class="mt-4 inline-block rounded-xl bg-slate-900 px-4 py-2 text-white font-semibold"
+                 href="https://calendly.com/kempen-willem"
+                 target="_blank" rel="noopener noreferrer">
+                Open Calendly
+              </a>
+            </div>
+          </div>
+
+          <p class="mt-4 text-xs text-slate-400">
+            Prefer Afrikaans? Geen probleem — ons kan die gesprek in Afrikaans doen.
+          </p>
+        </div>
+      </section>
+<!-- The 1-Day Practical AI Course -->
+<section id="course" class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+  <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-soft md:p-8">
+    <div class="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+      <div class="md:max-w-2xl">
+        <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">
+          The 1-Day Practical AI Course
+        </h2>
+        <p class="mt-3 text-slate-300">
+          A hands-on, non-technical course focused on everyday work: writing, summarising, research, and workflow templates.
+          Designed for South Africans — available in English or Afrikaans.
+        </p>
+
+        <div class="mt-4 grid gap-3 sm:grid-cols-3">
+          <div class="rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+            <div class="text-sm font-semibold text-slate-100">Format</div>
+            <div class="mt-1 text-sm text-slate-300">In-person or live online</div>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+            <div class="text-sm font-semibold text-slate-100">Duration</div>
+            <div class="mt-1 text-sm text-slate-300">09:00–16:00 (typical)</div>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+            <div class="text-sm font-semibold text-slate-100">Group size</div>
+            <div class="mt-1 text-sm text-slate-300">10–20 ideal</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-3xl border border-white/10 bg-slate-950/40 p-5 md:w-[320px]">
+        <div class="text-sm font-semibold text-slate-100">Who it’s for</div>
+        <ul class="mt-3 space-y-2 text-sm text-slate-300">
+          <li>• Admin staff & office teams</li>
+          <li>• Managers & supervisors</li>
+          <li>• Small business owners</li>
+          <li>• Researchers & analysts</li>
+          <li>• Corporate teams (productivity)</li>
+        </ul>
+
+        <a href="https://calendly.com/kempen-willem"
+           target="_blank" rel="noopener noreferrer"
+           class="mt-5 inline-flex w-full items-center justify-center rounded-2xl bg-sky-500/90 px-4 py-2 font-semibold text-slate-950 hover:bg-sky-400">
+          Book a consult call
+        </a>
+
+        <p class="mt-3 text-xs text-slate-400">
+          We’ll confirm goals, audience, tools, and a practical plan.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <h3 class="text-lg font-bold text-white">Programme (1 day)</h3>
+
+        <ol class="mt-4 space-y-3 text-sm text-slate-200">
+          <li class="flex gap-3">
+            <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-white/10">1</span>
+            <div>
+              <div class="font-semibold">AI basics (without the hype)</div>
+              <div class="text-slate-300">What it can/can’t do, where it helps most, common failure modes.</div>
+            </div>
+          </li>
+
+          <li class="flex gap-3">
+            <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-white/10">2</span>
+            <div>
+              <div class="font-semibold">Prompting that actually works</div>
+              <div class="text-slate-300">A simple structure you can reuse in any job: context → task → audience → format.</div>
+            </div>
+          </li>
+
+          <li class="flex gap-3">
+            <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-white/10">3</span>
+            <div>
+              <div class="font-semibold">Writing, rewriting, tone control</div>
+              <div class="text-slate-300">Emails, reports, proposals; short/long versions; Afrikaans/English.</div>
+            </div>
+          </li>
+
+          <li class="flex gap-3">
+            <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-white/10">4</span>
+            <div>
+              <div class="font-semibold">Reading accelerator</div>
+              <div class="text-slate-300">Summaries, key points, risks, action items from long documents.</div>
+            </div>
+          </li>
+
+          <li class="flex gap-3">
+            <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-white/10">5</span>
+            <div>
+              <div class="font-semibold">Workflow templates</div>
+              <div class="text-slate-300">Build reusable prompts and checklists for recurring weekly tasks.</div>
+            </div>
+          </li>
+
+          <li class="flex gap-3">
+            <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-white/10">6</span>
+            <div>
+              <div class="font-semibold">Responsible use (POPIA-aware habits)</div>
+              <div class="text-slate-300">What not to paste, quick verification checks, safe team practices.</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <h3 class="text-lg font-bold text-white">What you leave with</h3>
+
+        <ul class="mt-4 space-y-3 text-sm text-slate-200">
+          <li class="flex gap-3">
+            <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-sky-500/20 text-sky-200">✓</span>
+            A practical prompt framework you can reuse daily
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-sky-500/20 text-sky-200">✓</span>
+            Templates for emails, reports, summaries, and action plans
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-sky-500/20 text-sky-200">✓</span>
+            A “quick checks” habit to keep quality high (AI can be wrong)
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-sky-500/20 text-sky-200">✓</span>
+            A 30-day roll-out plan for your role/team
+          </li>
+        </ul>
+
+        <div class="mt-6 rounded-2xl border border-white/10 bg-slate-950/40 p-4">
+          <div class="text-xs font-semibold text-slate-200">Delivery options</div>
+          <p class="mt-1 text-sm text-slate-300">
+            Available as an in-person workshop, a live online course, or a customised corporate session.
+          </p>
+        </div>
+
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+          <a href="https://calendly.com/kempen-willem"
+             target="_blank" rel="noopener noreferrer"
+             class="rounded-2xl bg-white/10 px-5 py-2 text-center font-semibold hover:bg-white/15">
+            Ask about dates
+          </a>
+          <a href="#contact"
+             class="rounded-2xl border border-white/10 bg-slate-950/30 px-5 py-2 text-center font-semibold hover:bg-white/5">
+            Or email me
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="py-16">
 
-<h2 class="text-2xl font-bold">Who this training is for</h2>
-
-<div class="mt-8 grid gap-6 md:grid-cols-3">
-
-<div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-<h3 class="font-semibold">Business owners</h3>
-<p class="mt-2 text-sm text-slate-300">
-Use AI to reduce admin, improve marketing, and make better use of your time.
-</p>
-</div>
-
-<div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-<h3 class="font-semibold">Professionals</h3>
-<p class="mt-2 text-sm text-slate-300">
-Learn practical AI workflows that help with writing, research, reporting and analysis.
-</p>
-</div>
-
-<div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-<h3 class="font-semibold">Admin and operations staff</h3>
-<p class="mt-2 text-sm text-slate-300">
-Discover simple ways AI can help with documents, summaries, emails and repetitive tasks.
-</p>
-</div>
-
-</div>
-
-</section>
-  <section id="assessment" class="py-16">
-
-<h2 class="text-2xl font-bold">
-What level is your AI use at?
-</h2>
-
-<p class="mt-2 text-slate-300">
-A quick self-assessment to see where you are now.
-</p>
-
-<form id="aiAssessmentForm" class="mt-10 space-y-8">
-
-<div>
-
-<p class="font-semibold">
-1. How often do you use AI tools like ChatGPT?
-</p>
-
-<div class="mt-3 space-y-2">
-
-<label class="block">
-<input type="radio" name="q1" value="1"> I’ve barely used them
-</label>
-
-<label class="block">
-<input type="radio" name="q1" value="2"> I use them occasionally
-</label>
-
-<label class="block">
-<input type="radio" name="q1" value="3"> I use them regularly
-</label>
-
-</div>
-
-</div>
-
-<div>
-
-<p class="font-semibold">
-2. What do you mainly use AI for?
-</p>
-
-<label class="block mt-2">
-<input type="radio" name="q2" value="1"> Curiosity / experimenting
-</label>
-
-<label class="block">
-<input type="radio" name="q2" value="2"> Writing or summaries
-</label>
-
-<label class="block">
-<input type="radio" name="q2" value="3"> Structured work tasks
-</label>
-
-</div>
-
-<div>
-
-<p class="font-semibold">
-3. Do you reuse prompts or templates?
-</p>
-
-<label class="block mt-2">
-<input type="radio" name="q3" value="1"> No
-</label>
-
-<label class="block">
-<input type="radio" name="q3" value="2"> A few
-</label>
-
-<label class="block">
-<input type="radio" name="q3" value="3"> Yes
-</label>
-
-</div>
-<div>
-
-<p class="font-semibold">
-4. Is AI part of your daily workflow?
-</p>
-
-<label class="block mt-2">
-<input type="radio" name="q4" value="1"> Not really
-</label>
-
-<label class="block">
-<input type="radio" name="q4" value="2"> Sometimes
-</label>
-
-<label class="block">
-<input type="radio" name="q4" value="3"> Yes
-</label>
-
-</div>
-
-<div>
-
-<p class="font-semibold">
-5. Do other people in your organisation use AI?
-</p>
-
-<label class="block mt-2">
-<input type="radio" name="q5" value="1"> No
-</label>
-
-<label class="block">
-<input type="radio" name="q5" value="2"> A few
-</label>
-
-<label class="block">
-<input type="radio" name="q5" value="3"> Yes
-</label>
-
-</div>
-
-<button
-type="button"
-id="assessmentButton"
-class="rounded-2xl bg-sky-500 px-6 py-3 font-semibold text-slate-950">
-
-See my AI level
-
-</button>
-
-</form>
-
-<div id="assessmentResult" class="mt-10 hidden rounded-2xl border border-white/10 bg-white/5 p-6">
-
-<h3 class="text-xl font-bold" id="assessmentTitle"></h3>
-
-<p class="mt-2 text-slate-300" id="assessmentText"></p>
-
-</div>
-
-</section>
-<section id="course" class="py-16">
-
-<h2 class="text-2xl font-bold">
-The 1-Day Practical AI Course
-</h2>
-
-<p class="mt-4 text-slate-300 max-w-2xl">
-A focused one-day course designed to help people move from casual AI use to structured workflows that save real time.
-</p>
-
-<div class="mt-8 space-y-4 text-sm text-slate-300">
-
-<p>• Understanding how modern AI tools actually work</p>
-<p>• Prompting techniques that produce reliable results</p>
-<p>• Practical workflows for writing, research and reporting</p>
-<p>• Using AI safely in a professional environment</p>
-<p>• Building repeatable prompts that save time</p>
-
-</div>
-
-</section>
-<section id="contact" class="py-16">
-
-<h2 class="text-2xl font-bold">
-Talk to me
-</h2>
-
-<p class="mt-4 text-slate-300 max-w-2xl">
-If you're interested in training for your organisation, book a short call.
-</p>
-
-<div class="mt-8">
-
-<a
-href="https://calendly.com/kempen-willem"
-target="_blank"
-rel="noopener noreferrer"
-class="rounded-2xl bg-sky-500 px-6 py-3 font-semibold text-slate-950 hover:bg-sky-400">
-
-Open Calendly
-
-</a>
-
-</div>
-
-</section>
- <footer class="py-10 text-sm text-slate-500">
-
-<p>© <span id="year"></span> Willem Kempen</p>
-
+      
+      <!-- Training options -->
+      <section id="offers" class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+        <h2 class="text-2xl font-extrabold tracking-tight">Training options</h2>
+        <p class="mt-2 text-slate-300">Choose a format that fits your needs — individuals, teams, or 1:1.</p>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <div class="text-sm font-semibold text-slate-100">Live Online Workshop</div>
+            <p class="mt-2 text-sm text-slate-300">
+              Hands-on training for everyday work. Guided exercises + take-home templates.
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-200">
+              <li>• No coding</li>
+              <li>• English or Afrikaans</li>
+              <li>• Real workplace workflows</li>
+            </ul>
+            <a href="https://calendly.com/kempen-willem"
+               target="_blank" rel="noopener noreferrer"
+               class="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-white/10 px-4 py-2 font-semibold hover:bg-white/15">
+              Ask about dates / pricing
+            </a>
+          </div>
+
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <div class="text-sm font-semibold text-slate-100">Corporate Training (Teams)</div>
+            <p class="mt-2 text-sm text-slate-300">
+              Custom training built around your team’s actual workflows and documents.
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-200">
+              <li>• Tailored use-cases</li>
+              <li>• Simple rollout plan</li>
+              <li>• Sensible guardrails</li>
+            </ul>
+            <a href="https://calendly.com/kempen-willem"
+               target="_blank" rel="noopener noreferrer"
+               class="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-sky-500/90 px-4 py-2 font-semibold text-slate-950 hover:bg-sky-400">
+              Book a consult call
+            </a>
+          </div>
+
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <div class="text-sm font-semibold text-slate-100">1:1 Setup Session</div>
+            <p class="mt-2 text-sm text-slate-300">
+              A tailored workflow system for your role, plus templates and a 30-day plan.
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-200">
+              <li>• Personal use-cases</li>
+              <li>• Prompt templates</li>
+              <li>• 30-day rollout</li>
+            </ul>
+            <a href="https://calendly.com/kempen-willem"
+               target="_blank" rel="noopener noreferrer"
+               class="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-white/10 px-4 py-2 font-semibold hover:bg-white/15">
+              Enquire 1:1
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why this works -->
+      <section id="why" class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+        <div class="grid gap-6 md:grid-cols-2 md:items-start">
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h2 class="text-2xl font-extrabold tracking-tight">Why this training works</h2>
+            <p class="mt-3 text-slate-300">
+              Most people don’t need AI theory. They need practical workflows — and a clear sense of what to trust (and what not to).
+            </p>
+
+            <div class="mt-5 grid gap-3">
+              <div class="rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                <div class="text-sm font-semibold">Less hype, more workflow</div>
+                <div class="mt-1 text-sm text-slate-300">
+                  Repeatable ways to save time: summarising, drafting, rewriting, templates, and checklists.
+                </div>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                <div class="text-sm font-semibold">South Africa by design</div>
+                <div class="mt-1 text-sm text-slate-300">
+                  Practical constraints, realistic tools, and POPIA-aware habits — not Silicon Valley fantasy workflows.
+                </div>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                <div class="text-sm font-semibold">English or Afrikaans</div>
+                <div class="mt-1 text-sm text-slate-300">
+                  Training and examples can be delivered in the language your team works in.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <div class="text-sm font-semibold text-slate-100">Typical “hours saved” wins</div>
+            <p class="mt-2 text-sm text-slate-300">These are the kinds of changes that add up fast:</p>
+
+            <ul class="mt-4 space-y-3 text-sm text-slate-200">
+              <li class="flex gap-3">
+                <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-white/10">1</span>
+                Meeting notes → clean minutes + action items
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-white/10">2</span>
+                Draft and improve emails, reports, proposals
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-white/10">3</span>
+                Summarise PDFs and long documents into key points
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-white/10">4</span>
+                Templates for recurring tasks (weekly reports, updates)
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-white/10">5</span>
+                Simple workflows that reduce repetitive admin
+              </li>
+            </ul>
+
+            <div class="mt-6 rounded-2xl border border-white/10 bg-slate-950/40 p-4">
+              <div class="text-xs font-semibold text-slate-200">Important</div>
+              <p class="mt-1 text-xs text-slate-300">
+                AI can be wrong. You’ll learn quick checks that keep quality high while still saving time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About + Contact -->
+      <section id="about" class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+        <div class="grid gap-6 md:grid-cols-2 md:items-start">
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h2 class="text-2xl font-extrabold tracking-tight">About Willem</h2>
+            <p class="mt-3 text-slate-300">
+              I’m a writer, editor, and website builder who uses AI tools daily for real work — publishing, research, and systems that need to function in the real world.
+            </p>
+            <p class="mt-3 text-slate-300">
+              I teach AI in a practical, grounded way: what works, what doesn’t, and how to use it safely.
+              The goal is simple: <span class="font-semibold text-slate-100">save time and improve the quality of everyday work.</span>
+            </p>
+
+            <div class="mt-6 grid gap-3 sm:grid-cols-2">
+              <div class="rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                <div class="text-sm font-semibold">Practical focus</div>
+                <div class="mt-1 text-sm text-slate-300">Workflows, templates, and habits</div>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                <div class="text-sm font-semibold">Local context</div>
+                <div class="mt-1 text-sm text-slate-300">South Africa by design</div>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <a href="https://calendly.com/kempen-willem"
+                 target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center rounded-2xl bg-white/10 px-5 py-2 font-semibold hover:bg-white/15">
+                Book a call
+              </a>
+            </div>
+          </div>
+          <div id="contact" class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h2 class="text-2xl font-extrabold tracking-tight">Contact</h2>
+
+            <p class="mt-2 text-slate-300">
+              Prefer email? Write to
+              <a class="underline hover:text-white" href="mailto:willem.kempen@kriptiek.com">willem.kempen@kriptiek.com</a>.
+              (For fastest results, use the booking section above.)
+            </p>
+
+            <!-- Contact form (replace YOUR_FORM_ID with your Formspree ID when ready) -->
+            <form class="mt-6 space-y-3"
+                  action="https://formspree.io/f/xojkaezp"
+                  method="POST">
+              <input type="hidden" name="source" value="willemkempen.co.za" />
+<input type="hidden" name="_subject" value="AI Training enquiry — willemkempen.co.za">
+              <div>
+                <label class="mb-1 block text-sm text-slate-200">Name</label>
+                <input name="name" required
+                       class="w-full rounded-2xl border border-white/10 bg-slate-950/40 px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500/60"
+                       placeholder="Your name" />
+              </div>
+
+              <div>
+                <label class="mb-1 block text-sm text-slate-200">Email</label>
+                <input name="email" type="email" required
+                       class="w-full rounded-2xl border border-white/10 bg-slate-950/40 px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500/60"
+                       placeholder="you@example.com" />
+              </div>
+
+              <div>
+                <label class="mb-1 block text-sm text-slate-200">Message</label>
+                <textarea name="message" rows="5" required
+                          class="w-full rounded-2xl border border-white/10 bg-slate-950/40 px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500/60"
+                          placeholder="What kind of work do you do, and what would you like AI to help with?"></textarea>
+              </div>
+
+              <div class="grid gap-3 sm:grid-cols-2">
+                <button type="submit"
+                        class="rounded-2xl bg-sky-500/90 px-6 py-3 font-semibold text-slate-950 hover:bg-sky-400">
+                  Send message
+                </button>
+                <a href="#top"
+                   class="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 text-center font-semibold hover:bg-white/10">
+                  Back to top
+                </a>
+              </div>
+
+              <p class="text-xs text-slate-400">
+                Prefer Afrikaans? Skryf gerus in Afrikaans — ek kan die sessie in Afrikaans aanbied.
+              </p>
+            </form>
+
+            <div class="mt-6 rounded-2xl border border-white/10 bg-slate-950/40 p-4 text-sm text-slate-300">
+              <div class="font-semibold text-slate-100">Next step</div>
+              <div class="mt-1">
+                Share your role and 2–3 recurring tasks, and I’ll suggest the fastest “hours saved” workflow wins.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 mt-16">
+  <div class="max-w-6xl mx-auto px-6 py-6 text-sm text-slate-400 flex justify-between">
+
+    <span>
+      © <span id="year">2026</span> willemkempen.co.za
+    </span>
+
+    <a href="privacy.html" class="hover:text-white">
+      Privacy Policy
+    </a>
+
+  </div>
 </footer>
+  </div>
 
-</div>
+  <!-- Calendly embed script -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
-<script>
+  <!-- JS: menu + outside click + year + calendly fallback -->
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
 
-document.getElementById("year").textContent =
-new Date().getFullYear()
+    function closeMobileMenu() {
+      mobileMenu?.classList.add("hidden");
+    }
 
-document
-.getElementById("assessmentButton")
-.addEventListener("click", function () {
+    menuBtn?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      mobileMenu.classList.toggle("hidden");
+    });
 
-let total = 0
+    mobileMenu?.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", closeMobileMenu);
+    });
 
-document
-.querySelectorAll("input[type=radio]:checked")
-.forEach(el => total += Number(el.value))
+    // Close mobile menu on outside click
+    document.addEventListener("click", (e) => {
+      if (!mobileMenu || mobileMenu.classList.contains("hidden")) return;
+      const clickedInsideMenu = mobileMenu.contains(e.target);
+      const clickedMenuBtn = menuBtn && menuBtn.contains(e.target);
+      if (!clickedInsideMenu && !clickedMenuBtn) closeMobileMenu();
+    });
 
-let level = "Level 1 — Exploring"
-let text = "You have experimented with AI but it is not yet part of your workflow."
+    // Year (with fallback already in HTML)
+    const y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
 
-if (total >= 10) {
-level = "Level 3 — Structured Use"
-text = "You are beginning to build repeatable AI workflows."
-}
-
-if (total >= 13) {
-level = "Level 5 — Integrated Use"
-text = "AI is becoming embedded in how work gets done."
-}
-
-document.getElementById("assessmentTitle").textContent = level
-document.getElementById("assessmentText").textContent = text
-
-document
-.getElementById("assessmentResult")
-.classList.remove("hidden")
-
-})
-
-</script>
-
+    // Calendly fallback: if widget doesn't inject an iframe, show a link
+    setTimeout(() => {
+      const widget = document.querySelector(".calendly-inline-widget");
+      const fallback = document.getElementById("calendlyFallback");
+      if (!widget || !fallback) return;
+      const hasIframe = widget.querySelector("iframe");
+      if (!hasIframe) fallback.classList.remove("hidden");
+    }, 2500);
+  </script>
 </body>
-</html> 
+</html>
 
 
-
-
+      
