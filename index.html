@@ -64,9 +64,10 @@ content="Practical AI training for South African workplaces. Save hours of work 
           </div>
         </a>
 
-        <nav class="hidden items-center gap-6 text-sm text-slate-200 md:flex">
+       <nav class="hidden items-center gap-6 text-sm text-slate-200 md:flex">
           <a href="#offers" class="hover:text-white">Training</a>
           <a href="#course" class="hover:text-white">1-Day Course</a>
+          <a href="#assessment" class="hover:text-white">Assessment</a>
           <a href="#why" class="hover:text-white">Why this</a>
           <a href="#about" class="hover:text-white">About</a>
           <a href="https://calendly.com/kempen-willem"
@@ -86,10 +87,11 @@ content="Practical AI training for South African workplaces. Save hours of work 
       <div id="mobileMenu" class="hidden border-t border-white/10 bg-slate-950/95 backdrop-blur md:hidden">
         <div class="mx-auto max-w-6xl px-4 py-3">
           <div class="flex flex-col gap-2 text-sm">
-            <a href="#offers" class="rounded-lg px-3 py-2 hover:bg-white/10">Training</a>
-<a href="#course" class="rounded-lg px-3 py-2 hover:bg-white/10">1-Day Course</a>
-            <a href="#why" class="rounded-lg px-3 py-2 hover:bg-white/10">Why this</a>
-            <a href="#about" class="rounded-lg px-3 py-2 hover:bg-white/10">About</a>
+  <a href="#offers" class="rounded-lg px-3 py-2 hover:bg-white/10">Training</a>
+  <a href="#course" class="rounded-lg px-3 py-2 hover:bg-white/10">1-Day Course</a>
+  <a href="#assessment" class="rounded-lg px-3 py-2 hover:bg-white/10">Assessment</a>
+  <a href="#why" class="rounded-lg px-3 py-2 hover:bg-white/10">Why this</a>
+  <a href="#about" class="rounded-lg px-3 py-2 hover:bg-white/10">About</a>
             <a href="https://calendly.com/kempen-willem"
                target="_blank" rel="noopener noreferrer"
                class="rounded-lg bg-sky-500/90 px-3 py-2 font-semibold text-slate-950 hover:bg-sky-400">
@@ -280,6 +282,156 @@ Hands-on training designed for professionals, teams, and small businesses.
         </div>
       </section>
 
+      <!-- AI Self-Assessment -->
+      <section id="assessment" class="mx-auto max-w-6xl px-4 pb-10 md:px-6">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-soft md:p-8">
+          <div class="max-w-3xl">
+            <h2 class="text-2xl font-extrabold tracking-tight">
+              What level is your AI use at?
+            </h2>
+            <p class="mt-2 text-slate-300">
+              Take this quick self-assessment to see where you are now — and what the next step looks like.
+            </p>
+          </div>
+
+          <form id="aiAssessmentForm" class="mt-8 space-y-8">
+            <div>
+              <p class="text-sm font-semibold text-slate-100">
+                1. How often do you currently use AI tools like ChatGPT or Claude?
+              </p>
+              <div class="mt-3 space-y-2">
+                <label class="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                  <input type="radio" name="q1" value="1" class="mt-1" />
+                  <span class="text-sm text-slate-300">I’ve never used them, or only tried them once or twice.</span>
+                </label>
+                <label class="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                  <input type="radio" name="q1" value="2" class="mt-1" />
+                  <span class="text-sm text-slate-300">I use them occasionally for ad hoc tasks.</span>
+                </label>
+                <label class="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                  <input type="radio" name="q1" value="3" class="mt-1" />
+                  <span class="text-sm text-slate-300">I use them regularly as part of my normal work.</span>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-sm font-semibold text-slate-100">
+                2. What do you mainly use AI for right now?
+              </p>
+              <div class="mt-3 space-y-2">
+                <label class="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                  <input type="radio" name="q2" value="1" class="mt-1" />
+                  <span class="text-sm text-slate-300">Mostly curiosity or casual experimentation.</span>
+                </label>
+                <label class="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                  <input type="radio" name="q2" value="2" class="mt-1" />
+                  <span class="text-sm text-slate-300">Writing, summaries, or occasional research.</span>
+                </label>
+                <label class="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                  <input type="radio" name="q2" value="3" class="mt-1" />
+                  <span class="text-sm text-slate-300">Repeatable work tasks with clear prompts or workflows.</span>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-sm font-semibold text-slate-100">
+                3. Do you already have prompts or templates that you reuse?
+              </p>
+              <div class="mt-3 space-y-2">
+                <label class="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                  <input type="radio" name="q3" value="1" class="mt-1" />
+                  <span class="text-sm text-slate-300">No — I usually just type something new each time.</span>
+                </label>
+                <label class="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                  <input type="radio" name="q3" value="2" class="mt-1" />
+                  <span class="text-sm text-slate-300">A few, but they’re not very structured.</span>
+                </label>
+                <label class="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                  <input type="radio" name="q3" value="3" class="mt-1" />
+                  <span class="text-sm text-slate-300">Yes — I reuse prompts or templates regularly.</span>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-sm font-semibold text-slate-100">
+                4. Is AI part of your normal workflow yet?
+              </p>
+              <div class="mt-3 space-y-2">
+                <label class="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                  <input type="radio" name="q4" value="1" class="mt-1" />
+                  <span class="text-sm text-slate-300">Not really — I use it now and then.</span>
+                </label>
+                <label class="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                  <input type="radio" name="q4" value="2" class="mt-1" />
+                  <span class="text-sm text-slate-300">Sometimes — for certain tasks, but not consistently.</span>
+                </label>
+                <label class="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                  <input type="radio" name="q4" value="3" class="mt-1" />
+                  <span class="text-sm text-slate-300">Yes — it’s becoming a regular productivity tool.</span>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-sm font-semibold text-slate-100">
+                5. How widely is AI being used in your team or business?
+              </p>
+              <div class="mt-3 space-y-2">
+                <label class="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                  <input type="radio" name="q5" value="1" class="mt-1" />
+                  <span class="text-sm text-slate-300">It’s mostly just me experimenting.</span>
+                </label>
+                <label class="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                  <input type="radio" name="q5" value="2" class="mt-1" />
+                  <span class="text-sm text-slate-300">A few people use it, but there is no shared system.</span>
+                </label>
+                <label class="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/30 p-4">
+                  <input type="radio" name="q5" value="3" class="mt-1" />
+                  <span class="text-sm text-slate-300">It is starting to become part of how the team works.</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-3 sm:flex-row">
+              <button type="button"
+                      id="aiAssessmentBtn"
+                      class="rounded-2xl bg-sky-500/90 px-6 py-3 font-semibold text-slate-950 hover:bg-sky-400">
+                See my AI level
+              </button>
+
+              <button type="reset"
+                      id="aiAssessmentReset"
+                      class="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 font-semibold hover:bg-white/10">
+                Reset
+              </button>
+            </div>
+          </form>
+
+          <div id="aiAssessmentResult" class="mt-8 hidden rounded-3xl border border-white/10 bg-slate-950/40 p-6">
+            <div class="text-sm font-semibold text-sky-300" id="aiAssessmentLevelLabel"></div>
+            <h3 class="mt-2 text-2xl font-extrabold tracking-tight text-white" id="aiAssessmentTitle"></h3>
+            <p class="mt-3 text-slate-300" id="aiAssessmentText"></p>
+            <p class="mt-4 text-slate-200 font-semibold" id="aiAssessmentNext"></p>
+
+            <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+              <a href="https://calendly.com/kempen-willem"
+                 target="_blank" rel="noopener noreferrer"
+                 class="rounded-2xl bg-sky-500/90 px-6 py-3 text-center font-semibold text-slate-950 hover:bg-sky-400">
+                Book a short call
+              </a>
+
+              <a href="#course"
+                 class="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 text-center font-semibold hover:bg-white/10">
+                View the 1-day course
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <!-- Calendly (embedded booking + fallback) -->
       <section class="mx-auto max-w-4xl px-4 py-10 md:px-6">
         <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-soft md:p-8">
@@ -742,6 +894,83 @@ Hands-on training designed for professionals, teams, and small businesses.
       const hasIframe = widget.querySelector("iframe");
       if (!hasIframe) fallback.classList.remove("hidden");
     }, 2500);
+
+    // AI self-assessment
+    const aiAssessmentBtn = document.getElementById("aiAssessmentBtn");
+    const aiAssessmentReset = document.getElementById("aiAssessmentReset");
+    const aiAssessmentResult = document.getElementById("aiAssessmentResult");
+    const aiAssessmentLevelLabel = document.getElementById("aiAssessmentLevelLabel");
+    const aiAssessmentTitle = document.getElementById("aiAssessmentTitle");
+    const aiAssessmentText = document.getElementById("aiAssessmentText");
+    const aiAssessmentNext = document.getElementById("aiAssessmentNext");
+
+    const aiAssessmentLevels = {
+      1: {
+        label: "Level 1",
+        title: "Exploring",
+        text: "You’ve experimented with AI a little, but it is not yet part of your real workflow. That’s normal. Most people start here.",
+        next: "Your next step: learn the basics properly and start using AI for a few clear, repeatable tasks."
+      },
+      2: {
+        label: "Level 2",
+        title: "Occasional Use",
+        text: "You already see that AI can be useful, but your use is still inconsistent. You probably use it for ad hoc writing or summaries, without a repeatable system.",
+        next: "Your next step: move from occasional use to structured use with reusable prompts and simple workflows."
+      },
+      3: {
+        label: "Level 3",
+        title: "Structured Use",
+        text: "You’ve started using AI in a more deliberate way. You are building habits, prompts, or templates that save time in certain tasks.",
+        next: "Your next step: strengthen your workflows and apply them more consistently across your work."
+      },
+      4: {
+        label: "Level 4",
+        title: "Integrated Workflow",
+        text: "AI is becoming a regular productivity tool for you or your team. The value is visible, and time savings are real.",
+        next: "Your next step: improve quality control, team consistency, and responsible use."
+      },
+      5: {
+        label: "Level 5",
+        title: "Team Adoption",
+        text: "AI is no longer just an experiment. It is becoming embedded in how work gets done across roles or teams.",
+        next: "Your next step: refine shared practices, guardrails, and higher-level workflow design."
+      }
+    };
+
+    aiAssessmentBtn?.addEventListener("click", () => {
+      const answers = ["q1", "q2", "q3", "q4", "q5"].map(name => {
+        const selected = document.querySelector(`input[name="${name}"]:checked`);
+        return selected ? Number(selected.value) : null;
+      });
+
+      if (answers.includes(null)) {
+        alert("Please answer all five questions first.");
+        return;
+      }
+
+      const total = answers.reduce((sum, value) => sum + value, 0);
+
+      let level = 1;
+      if (total >= 14) level = 5;
+      else if (total >= 12) level = 4;
+      else if (total >= 10) level = 3;
+      else if (total >= 8) level = 2;
+
+      const result = aiAssessmentLevels[level];
+
+      aiAssessmentLevelLabel.textContent = result.label;
+      aiAssessmentTitle.textContent = result.title;
+      aiAssessmentText.textContent = result.text;
+      aiAssessmentNext.textContent = result.next;
+
+      aiAssessmentResult.classList.remove("hidden");
+      aiAssessmentResult.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    aiAssessmentReset?.addEventListener("click", () => {
+      aiAssessmentResult?.classList.add("hidden");
+    });
+    
   </script>
 </body>
 </html>
